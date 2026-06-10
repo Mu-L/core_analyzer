@@ -8,7 +8,6 @@
 #define DECODE_H_
 
 #include "x_dep.h"
-#include "x_type.h"
 #include "opcode/i386.h"
 
 /*
@@ -176,7 +175,7 @@ struct decode_control_block
 	unsigned int reserved:30;
 };
 
-extern void decode_func(char *arg);
+extern void decode_func(const char *arg);
 
 extern int decode_insns(struct decode_control_block*);
 
